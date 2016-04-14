@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.binarysatan.library.adapter.BaseAdapter;
 import com.binarysatan.library.adapter.MultiLayoutAdapter;
 import com.binarysatan.library.adapter.holder.BaseHolder;
 
@@ -34,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //普通 adapter.
-//        mRecyclerView.setAdapter(new BaseAdapter<String>(this, R.layout.item_layout, mDatas) {
-//            @Override
-//            public void updateUI(BaseHolder holder, int position, String data) {
-//                holder.setText(R.id.tv, data);
-//            }
-//        });
+//        普通 adapter.
+        mRecyclerView.setAdapter(new BaseAdapter<String>(this, R.layout.item_layout, mDatas) {
+            @Override
+            public void updateUI(BaseHolder holder, int position, String data) {
+                holder.setText(R.id.tv, data);
+            }
+        });
 
         //多布局adapter
         mRecyclerView.setAdapter(new MultiLayoutAdapter<String>(this, mDatas) {

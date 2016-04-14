@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -16,6 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+publish {
+    userOrg = 'binarysatan'
+    groupId = 'com.binarysatan'
+    artifactId = 'CommonAdapter'
+    publishVersion = '1.0.0'
+    desc = ' this is commonadapter, is easy'
+    website = 'https://github.com/BinarySatan/CommonAdapter'
 }
 
 dependencies {
