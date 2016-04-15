@@ -17,7 +17,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-
     private static List<String> mDatas = new ArrayList<>();
 
     static {
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void updateMuiltUI(BaseHolder holder, int position, List<String> data) {
-                if (R.layout.item_layout == getItemViewType(position)) {
+                if (R.layout.item_layout == getLayoutId(holder)) {
                     holder.setText(R.id.tv, "哈哈");
                 } else {
                     holder.setText(R.id.tv, "嘎嘎");

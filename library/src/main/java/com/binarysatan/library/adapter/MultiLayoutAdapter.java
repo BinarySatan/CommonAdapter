@@ -19,13 +19,17 @@ public abstract class MultiLayoutAdapter<T> extends BaseAdapter<T> {
     @Override
     public BaseHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         BaseHolder holder = BaseHolder.get(mLayoutInflater.inflate(viewType, parent, false));
-        setListener(holder,mData);
+        setListener(holder, mData);
         return holder;
     }
 
     @Override
     public int getItemViewType(int position) {
         return multiLayout(position);
+    }
+
+    public int getLayoutId(BaseHolder holder) {
+        return getItemViewType(holder.getAdapterPosition());
     }
 
 
