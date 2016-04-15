@@ -5,7 +5,16 @@
 ##Use
 
 ### dependency
+##### in your module build.gradle
+	compile 'com.binarysatan:CommonAdapter:1.0.0'
 
+##### maven 
+	<dependency>
+  <groupId>com.binarysatan</groupId>
+  <artifactId>CommonAdapter</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
 
 
 ### normal adapter
